@@ -28,13 +28,12 @@ mataAAgatha(Persona):-
 
 ?- mataAAgatha(Persona).
 Persona = agatha ;
-Persona = carnicero ;
 
 ?- odia(_,milhouse).
 false.
 
 ?- odia(charles,Persona).
-Persona = charles.
+Persona = carnicero ;
 
 ?- odia(Persona,agatha).
 Persona = agatha ;
@@ -42,11 +41,10 @@ Persona = carnicero ;
 
 ?- odia(Odiador,Odiado).
 Odiador = Odiado, Odiado = agatha ;
-Odiador = agatha, Odiado = carnicero ;
+Odiador = agatha, Odiado = charles ;
 Odiador = carnicero, Odiado = agatha ;
-Odiador = Odiado, Odiado = carnicero ;
-Odiador = Odiado, Odiado = charles.
-
+Odiador = carnicero, Odiado = charles ;
+Odiador = charles, Odiado = carnicero ;
 
 ?- odia(carnicero,_).
 true 
